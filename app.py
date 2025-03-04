@@ -5,15 +5,16 @@ from folium.plugins import MarkerCluster
 from streamlit_folium import folium_static
 
 # Charger les données
+import os
+import pandas as pd
+import streamlit as st
+
+# Charger les données
 @st.cache_data
 def load_data():
-    import os
-file_path = os.path.join(os.getcwd(), "BDD_geospatiale_04032025.xlsx")
-df = pd.read_excel(file_path, sheet_name="Feuil1")
-
- # Remplacez par le bon chemin
-df = pd.read_excel(file_path, sheet_name="Feuil1")
-    return df
+    file_path = os.path.join(os.getcwd(), "BDD_geospatiale_04032025.xlsx")
+    df = pd.read_excel(file_path, sheet_name="Feuil1")
+    return df  # Assurez-vous que cette ligne est bien alignée avec df = pd.read_excel
 
 df = load_data()
 
