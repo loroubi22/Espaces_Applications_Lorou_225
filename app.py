@@ -12,7 +12,7 @@ file_path = os.path.join(os.getcwd(), "BDD_geospatiale_04032025.xlsx")
 df = pd.read_excel(file_path, sheet_name="Feuil1")
 
  # Remplacez par le bon chemin
-    df = pd.read_excel(file_path, sheet_name="Feuil1")
+df = pd.read_excel(file_path, sheet_name="Feuil1")
     return df
 
 df = load_data()
